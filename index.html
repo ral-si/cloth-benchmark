@@ -1,1 +1,614 @@
-<h1>hello world<\h1>
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Cloth Manipulation Benchmark</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#benchmark">Benchmark</a></li>
+							<li><a href="#tasks">Tasks</a></li>
+							<li><a href="#scoring">Scoring</a></li>							
+							<li><a href="#resources">Resources</a></li>
+							<li><a href="#results">Results</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="benchmark" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>A Benchmark for Dual-arm Cloth Manipulation</h1>
+							<h3>Irene Garcia-Camacho*, Martina Lippi*, Michael C. Welle, Hang Yin, Rika Antonova, Anastasiia Varava, Júlia Borràs, Carme Torras, Alessandro Marino, Guillem Alenyà, Danica Kragic</h3>
+							<p>Cloth manipulation is a challenging task that,
+							despite its importance, has received relatively little attention
+							compared to rigid object manipulation. In this paper, we
+							provide a benchmark for evaluation and comparison of different
+							approaches towards three basic tasks in cloth manipulation:
+							spreading a tablecloth over a table, folding a towel, and
+							dressing. The tasks can be executed on any dual-arm robotic
+							platform and the objects involved in the tasks are standardized
+							and easy to acquire. We provide several complexity levels for
+							each task, and describe the quality measures to evaluate task
+							execution. Furthermore, we provide baseline solutions for all
+							the tasks and evaluate them according to the proposed metrics.</p>
+
+							<a href="Benchmark_for_cloth_manipulation.pdf" download="Benchmark_for_cloth_manipulation.pdf">Download Paper </a>
+							
+
+							<div class="row">
+								<!--article class="col-4 col-12-xsmall work-item"-->
+									<video width="640" height="480" controls>
+									  <source src="videos/Cloth_manipulation_benchmark.mp4" type="video/mp4">									
+									</video>
+								<!--/article-->
+							</div>
+
+							<p> </p>
+
+							<a href="cloth_manipulation_benchmark_resources.tar.xz" download="cloth_manipulation_benchmark_resources.tar.xz">Download Dual-arm Cloth Manipulation Benchmark Resources</a>
+							<p> </p>
+
+							<ul class="actions">
+								<li><a href="#tasks" class="button scrolly">Tasks</a></li>
+							</ul>
+
+
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="tasks" class="wrapper style2 spotlights">
+						<section>
+							<a  class="image"><img src="images/spreading.PNG" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Task 1:  Spreading a tablecloth</h2>
+									<p>This task consists in taking a tablecloth and spreading it on a table. </p>
+									<p>Tablecloth spreading provides four possible starting configurations using a defined tablecloth </p>
+
+									<ul> <li>[pg2] cloth is pre grasped on two grasping points</li> 
+										<li>[pg1] cloth is pre grasped on one grasping point </li> 
+										<li>[fd] cloth is folded</li> 
+										<li>[cr] cloth is crumpled</li> 
+
+
+									</ul>
+
+									<!--ul class="actions">
+										<li><a href="task_1_spreading_tablecloth.html" class="button">Details</a></li>
+									</ul-->
+								</div>
+							</div>
+						</section>
+						<section>
+							<a  class="image"><img src="images/folding.PNG" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Task 2: Folding a towel</h2>
+									<p>This task consists in taking a towel and folding it.  </p>
+									<p>Towel folding provides four possible starting configurations using two different sized towels for up to three folds </p>
+
+									<ul> <li>[pg2] cloth is pre grasped on two grasping points</li> 
+										<li>[pg1] cloth is pre grasped on one grasping point </li> 
+										<li>[ft] cloth is flat on the table</li> 
+										<li>[cr] cloth is crumpled</li> 
+
+
+									</ul>
+									<!--ul class="actions">
+										<li><a href="task_2_folding_towel.html" class="button">Details</a></li>
+									</ul-->
+								</div>
+							</div>
+						</section>
+						<section>
+							<a  class="image"><img src="images/task_3_dressing.png" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Task 3: Partial dressing</h2>
+									<p>This task consists in putting a T-shirt over a simple head model. </p>
+									<p> Partial dressing provides five possible starting configurations using two different sized heads depending on the T-shirt size </p>
+									<ul> <li>[pg2] cloth is pre grasped on two grasping points</li> 
+										<li>[pg1] cloth is pre grasped on one grasping point </li> 
+										<li>[ft] cloth is flat on the table</li> 
+										<li>[fd] cloth is folded</li> 
+										<li>[cr] cloth is crumpled</li> 
+
+
+									</ul>
+									<!--ul class="actions">
+										<li><a href="task_3_partial_dressing.html" class="button">Details</a></li>
+									</ul-->
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<section id="scoring" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Scoring</h2>
+							<p>The scoring considers the following list of performance metrics: success of each phase, execution time, force measures and quality measures</p>
+
+							<h3> Success of each phase - Task 1: Spreading a tablecloth </h3>
+
+							<div class="row">
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<h3>MAN</h3>
+											<p>The tablecloth is sucessfully spread if it covers the table top</p>
+										</section>	
+								</article>
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<h3>GR2</h3>
+											<p>Grasping is maintained during the manipulation phase.
+											</p>
+										</section>	
+								</article>
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<h3>GR1</h3>
+											<p>Grasping is maintained during the manipulation phase.
+											</p>
+											<div>When grasping with starting configuration [fd]: The tablecloth needs to unfold after the first grasp.</div>
+										</section>	
+								</article>
+								
+							</div>
+
+							<h3> Success of each phase - Task 2: Folding a towel  </h3>
+
+							<div class="row">
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<h3>MAN</h3>
+											<p>The towel is successfully folded if one fold has been done</p>
+										</section>	
+								</article>
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<h3>GR2</h3>
+											<p>Grasping is maintained during the manipulation phase.
+											</p>
+											
+										</section>	
+								</article>
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<h3>GR1</h3>
+											<p>Grasping is maintained during the manipulation phase.
+											</p>
+											<div>When grasping with starting configuration [fd]: The towel needs to unfold after the first grasp.</div>
+										</section>	
+								</article>
+								
+							</div>
+
+							<h3> Success of each phase - Task 3: Partial dressing </h3>
+
+							<div class="row">
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<h3>MAN</h3>
+											<p>The T-shirt is successfully dressed when the neck hole of it is put over the head and the
+												entirety of the T-shirt lies below the head.</p>
+										</section>	
+								</article>
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<h3>GR2</h3>
+											<p>Grasping is maintained during the manipulation phase.</p>
+										</section>	
+								</article>
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<h3>GR1</h3>
+											<p>Grasping is maintained during the manipulation phase.</p>
+											<div>When grasping with starting configuration [fd]: The T-shirt needs to unfold after the first grasp.</div>
+										</section>	
+								</article>
+								
+							</div>
+
+							<h3> Task error measures - Task 1: Spreading a tablecloth </h3>
+							<div class="row">
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a  class="image"><img src="images/task_1_error.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a  class="image"><img src="images/task_1_error_formulas.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<p>These measures of error can only be applied if the task has
+												been finished with success. A 100% rotation error
+												occurs when the tablecloth is rotated π/4 radians. The maximum translation error
+												occurs when one of the hanging parts is zero, meaning the
+												table is almost uncovered</p>
+										</section>	
+								</article>
+								
+							</div>
+
+							<h3> Task error measures - Task 2: Folding a towel  </h3>
+							<div class="row">								
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a  class="image"><img src="images/task_2_error_formulas.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-8 col-12-xsmall work-item">
+										<section>
+											<p>where A<sub>f</sub> is the final area of the cloth from the top view, and
+												A<sub>i</sub>
+												is the initial area of the cloth. Assuming A<sub>f</sub> will always
+												be smaller than A<sub>i</sub>, 100% error occurs when A<sub>i</sub> = A<sub>f</sub> , but
+												also if A<sub>f</sub> is less than half of A<sub>i</sub>, which can only happen if
+												there are wrinkles or extra folds.</p>
+										</section>	
+								</article>
+								
+							</div>
+
+							<h3> Task error measures - Task 3: Partial dressing </h3>
+							<div class="row">								
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a class="image"><img src="images/task_3_error.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-8 col-12-xsmall work-item">
+										<section>
+											<p>The dressing task is binary and is accomplished
+												when the neck hole of the T-shirt is put over the head and the
+												entirety of the T-shirt lies below the head.</p>
+										</section>	
+								</article>
+								
+							</div>
+
+
+							
+
+
+							<p> </p>
+							<p>The execution time and force measures are identical for each task.</p>
+							<p> <b>Execution time: </b> The execution time comprises the times needed for all the phases.</p>
+							<p> <b> Force measures: </b> Force measures quantify the interaction between the robots and the environment; they are only
+								acquired during phase [MAN] and minimum, maximum and average norms at the end effectors are considered. 
+								Note that, in order to not limit the possibility of using the benchmark,
+								force measures are not mandatory but are highly encouraged
+								especially in dressing tasks, where monitoring of exerted
+								forces on the head represents a key feature </p>
+
+
+
+						<h3> Reporting tables </h3>
+						<p>The final scoring is done in the following reporting tables:</p>
+						
+						<div class="row">
+							<a  class="image"><img src="images/scoring_tables.png" alt="" data-position="center center"  width=100% /> </a>
+						</div>
+						<a href="scoring_sheets.tar.xz" download="scoring_sheets.tar.xz">Download all scoring sheets</a>
+
+					</section>
+
+				<!-- Three -->
+					<section id="resources" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Resources</h2>
+							<p>The protocols and scoring details as well as a list of needed objects can be found here:</p>
+
+							<h3>Protocols:</h3>
+							<p> <a href="resources/Protocols_and_benchmarks/Task1/Protocol_Task1_P-DACM-S-0.1.pdf" download="Protocol_Task1_P-DACM-S-0.1.pdf">Download Task 1: spreading a tablecloth protocol (P-DACM-S-0.1)</a> </p>
+							
+
+							<p> 
+								<a href="resources/Protocols_and_benchmarks/Task2/Protocol_Task2_P-DACM-F-0.1.pdf" download="Protocol_Task2_P-DACM-F-0.1.pdf">Download Task 2: folding a towel protocol (P-DACM-F-0.1)</a> </p>
+
+							<p> <a href="resources/Protocols_and_benchmarks/Task3/Protocol_Task3_P-DACM-D-0.1.pdf" download="Protocol_Task3_P-DACM-D-0.1.pdf">Download Task 3: partial dressing protocol (P-DACM-D-0.1)</a> </p>
+
+
+							<h3>Benchmarks:</h3>
+							<p> <a href="resources/Protocols_and_benchmarks/Task1/Benchmark_Task1_B-DACM-S-0.1.pdf" download="Benchmark_Task1_B-DACM-S-0.1.pdf">Download Task 1: spreading a tablecloth enchmark (B-DACM-S-0.1)</a> </p>
+							
+
+							<p> <a href="resources/Protocols_and_benchmarks/Task2/Benchmark_Task2_B-DACM-F-0.1.pdf" download="Benchmark_Task2_B-DACM-F-0.1.pdf">Download Task 2: folding a towel benchmark (B-DACM-F-0.1) </a> </p>
+
+							<p> <a href="resources/Protocols_and_benchmarks/Task3/Benchmark_Task3_B-DACM-D-0.1.pdf" download="Benchmark_Task3_B-DACM-D-0.1.pdf">Download Task 3: Partial dressing benchmark (B-DACM-D-0.1)</a> </p>
+
+							
+							<h3> Objects </h3>
+
+							<p> Table: </p>	
+							<div class="row">	
+
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a  class="image"><img src="images/objects_table.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-8 col-12-xsmall work-item">
+										<section>
+											<p> Any table in the allowed range. Example is  <a href="https://www.ikea.com/se/sv/p/rydebaeck-bord-vit-vaestana-moerkbrun-s29167179/" target="_blank">RYDEBÄCK</a> from IKEA  </p>
+										</section>	
+								</article>
+								
+							</div>
+
+							<p> Tablecloth: </p>	
+							<div class="row">	
+
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a  class="image"><img src="images/object_tablecloth.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-8 col-12-xsmall work-item">
+										<section>
+											<p> IKEA tablecloth  <a href="https://www.ikea.com/se/sv/p/fullkomlig-duk-vit-10343045/ "target="_blank">FULLKOMLIG</a> 145x240 cm </p>
+										</section>	
+								</article>
+								
+							</div>
+
+
+							<p> Small towel: </p>	
+							<div class="row">	
+
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a  class="image"><img src="images/object_small_towel.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-8 col-12-xsmall work-item">
+										<section>
+											<p> IKEA towel  <a href="https://www.ikea.com/se/sv/p/haeren-gaesthandduk-vit-50163570/" target="_blank">HÄREN</a> 30x50 cm or 30x30 cm </p>
+										</section>	
+								</article>
+								
+							</div>
+
+							<p> Big towel: </p>	
+							<div class="row">	
+
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a  class="image"><img src="images/object_big_towel.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-8 col-12-xsmall work-item">
+										<section>
+											<p> IKEA towel  <a href="https://www.ikea.com/se/sv/p/haeren-gaesthandduk-vit-50163570/" target="_blank">HÄREN</a> 50x100 cm or 40x70 cm </p>
+										</section>	
+								</article>
+								
+							</div>
+
+							
+
+							<p> T-shirt: </p>	
+							<div class="row">	
+
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a  class="image"><img src="images/object_tshirt.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-8 col-12-xsmall work-item">
+										<section>
+											<p> Any T-shirt in the specified range. For example sizes S-XL of the <a href="https://www.amazon.com/gp/product/B00ACIFT92?colid=3SB5HTT9MA7Q4&coliid=I36KBO1XWK563Z&psc=1&ref_=wl_it_dp_o_pC_nS_ttl"target="_blank">YCB-T-shirt</a>  </p>
+										</section>	
+								</article>
+								
+							</div>
+
+							<p> Big and small head: </p>	
+							<div class="row">	
+
+								<article class="col-4 col-12-xsmall work-item">
+										<section>
+											<a  class="image"><img src="images/object_head.png" alt="" data-position="center center"  width=100% /> </a>
+											
+										</section>	
+								</article>
+								<article class="col-8 col-12-xsmall work-item">
+										<section>
+											<p> Use the  <a href="https://www.freecadweb.org/" target="_blank">Freecad</a> and the provided script <a href="resources/generate_head_stls.py" download="resources/Supplementary_material/generate_head_stls.py" target="_blank"> generate_head_stls.py</a>. Edit the measurements and run: freecadcmd generate_head_stls.py    </p>
+										</section>	
+								</article>
+								
+							</div>
+
+							
+						</div>
+					</section>
+
+					<!-- four -->
+					<section id="results" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Results</h2>
+							<p>To showcase how the presented Benchmark should be used and promote comparison of different methods we describe our own systems tackling the Benchmark.</p>
+
+							<h3>Task 1: Spreading a tablecloth </h3>
+							<p> The solution for [GR1] to unfold the tablecloth is to grasp
+							the first grasping point and pull the cloth up. The solution for
+							[GR2] is to grasp a point on the edge of the cloth next to the
+							first hand and trace the edge until the corner
+							at the end of the edge is reached. This implies slipping the
+							cloth inside the gripper without loosing it. Each grasp is performed by
+							a different TIAGo robot, and after they have the tablecloth
+							grasped, they move across the table to spread the tablecloth
+							on the table.  </p>
+							<div class="row">
+								<a  class="image"><img src="images/results_task_1_scoresheet.png" alt="" data-position="center center"  width=100% /> </a>
+							</div>
+							<p> <a href="resources/Baselines/Task1/Baseline_Task1_B-DACM-S-0.1_scoring_sheet.pdf" download="Baseline_Task1_B-DACM-S-0.1_scoring_sheet.pdf">Download Task 1: complete scoring sheet</a> </p>
+
+						
+
+							<p> <a href="task_1_spreading_tablecloth_videos_benchmark.html" > View Task 1: execution videos</a> </p>
+
+							<p> <a href="resources/Baselines/Task1/Baseline_Task1_B-DACM-S-0.1_comments_to_submit.pdf" download="Baseline_Task1_B-DACM-S-0.1_comments_to_submit.pdf">Download Task 1: comments on solution</a> </p>
+
+
+
+							<h3>Task 2: folding a towel  </h3>
+							<p> For the task of folding a towel, we use the same robotic
+							system as in the previous task and we consider the big towel
+							( [bt] ) with measures 0.5×1 m. The two mobile manipulators
+							are placed at different sides of the table where the towel
+							is to be folded. We just report the [MAN] phase, as this
+							is the most different phase compared to Task 1. Thus, we
+							start with the two corners already grasped, and we then
+							perform the folding motion. For the folding strategy, we only
+							focus on the first fold and we use a Dynamic Movement
+							Primitives (DMP) representation of the motion for each robot
+							learned by demonstration, and execute both trajectories in
+							synchronization. The size of the towel and the localization of the robot with respect to the table are assumed to be
+							known. </p>
+							<div class="row">
+								<a class="image"><img src="images/results_task_2_scoresheet.png" alt="" data-position="center center"  width=100% /> </a>
+							</div>
+
+							<p> <a href="resources/Baselines/Task2/Baseline_Task2_B-DACM-F-0.1_scoring_sheet.pdf" download="Baseline_Task2_B-DACM-F-0.1_scoring_sheet.pdf">Download Task 2: complete scoring sheet</a> </p>
+
+							
+							<p> <a href="task_2_folding_towel_videos_benchmark.html" > View Task 2: execution videos</a> </p>
+
+							
+							<p> <a href="resources/Baselines/Task2/Baseline_Task2_B-DACM-F-0.1_comments_to_submit.pdf" download="Baseline_Task2_B-DACM-F-0.1_comments_to_submit.pdf">Download Task 2: comments on solution</a> </p>
+
+							<h3>Task 3: Partial dressing  </h3>
+							<p> For the dressing task, we propose a human inspired
+								solution based on a vision/force-feedback informed strategy
+								with hand-tuned hyperparameters. Concerning the grasping phases [GR1] and [GR2] , pre-
+								defined grasping poses are selected with initial configurations
+								[pg1] , [cr] , [ft] and [fd] , thus no visual feedback is exploited
+								in these stages. Concerning the manipulation phase [MAN] ,
+								the basic idea is to use the visual information to guide
+								the team motion and, at the same time, to perform random
+								wiggling motions which emulate human-like dressing. More specifically, a vision system is designed which splits
+								the top-view circle associated with the head into two halves
+								and measures the free area in each of them. These measures are then exploited to determine
+								in which direction to move the team centroid in such a way
+								that both areas exceed a certain threshold. </p>
+							<div class="row">
+								<a  class="image"><img src="images/results_task_3_scoresheet_sh.png" alt="" data-position="center center"  width=100% /> </a>
+							</div>
+
+							<div class="row">
+								<a class="image"><img src="images/results_task_3_scoresheet_bh.png" alt="" data-position="center center"  width=100% /> </a>
+							</div>
+
+							<p> <a href="resources/Baselines/Task3/Baseline_Task3_B-DACM-D-0.1_scoring_sheet_t-shirt_1.pdf" download="Baseline_Task3_B-DACM-D-0.1_scoring_sheet_t-shirt_1.pdf">Download Task 3: complete scoring sheet</a> </p>
+						
+
+							<p> <a href="task_3_partial_dressing_benchmark.html" > View Task 3: execution videos</a> </p>
+
+							<p> <a href="resources/Baselines/Task3/Baseline_Task3_B-DACM-D-0.1_comments_to_submit.pdf" download="Baseline_Task3_B-DACM-D-0.1_comments_to_submit.pdf">Download Task 3: comments on solution</a> </p>
+
+							<h2>Task 3: Partial dressing second shirt  </h2>
+							<div class="row">
+								<a  class="image"><img src="images/results_task_3_scoresheet_bh_2.png" alt="" data-position="center center"  width=100% /> </a>
+							</div>
+
+							<p> <a href="resources/Baselines/Task3/Baseline_Task3_B-DACM-D-0.1_scoring_sheet_t-shirt_2.pdf" download="Baseline_Task3_B-DACM-D-0.1_scoring_sheet_t-shirt_2.pdf">Download Task 3: complete scoring sheet</a> </p>
+						
+
+							<p> <a href="task_3_partial_dressing_benchmark_2.html" > View Task 3: execution videos second shirt</a> </p>
+
+
+
+						</div>
+
+
+
+					</section>
+
+					<!-- five -->
+					<section id="contact" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Contact</h2>
+							 
+							
+							<ul> <li>Irene Garcia-Camacho*, igarcia@iri.upc.edu, Institut
+de Robòtica i Informàtica Industrial, Spain</li> 
+										<li>Martina Lippi*; lippi@kth.se, mlippi@unisa.it; KTH Royal Institute of Technology, Sweden and University of Salerno, Italy</li> 
+										<li>Michael C. Welle; mwelle@kth.se; KTH Royal Institute of Technology, Sweden</li> 
+										<li>Hang Yin; hyin@kth.se; KTH Royal Institute of Technology, Sweden</li> 
+										<li>Rika Antonova; antonova@kth.se; KTH Royal Institute of Technology, Sweden</li> 
+										<li>Anastasiia Varava; varava@kth.se; KTH Royal Institute of Technology, Sweden</li> 
+										<li>Júlia Borràs; jborras@iri.upc.edu; Institut
+de Robòtica i Informàtica Industrial, Spain </li> 
+										<li>Carme Torras; torras@iri.upc.edu; Institut
+de Robòtica i Informàtica Industrial, Spain</li> 
+										<li>Alessandro Marino; al.marino@unicas.it; University of Cassino and Southern Lazio, Italy</li> 
+										<li>Guillem Alenyà; galenya@iri.upc.edu; Institut
+de Robòtica i Informàtica Industrial, Spain</li> 
+										<li>Danica Kragic; dani@kth.se; KTH Royal Institute of Technology, Sweden</li> 
+
+
+									</ul>
+							
+						</div>
+					</section>
+
+
+
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
