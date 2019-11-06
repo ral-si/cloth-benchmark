@@ -3907,3 +3907,11 @@ input, select, textarea {
 			}
 
 		}
+
+
+#resources p{
+	margin: 20px 0 0 0;
+}
+#resources h3{
+margin-top: 30px;
+}
