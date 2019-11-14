@@ -2566,6 +2566,7 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		margin-bottom:20px; 
 	}
 
 		.image img {
@@ -3914,4 +3915,12 @@ input, select, textarea {
 }
 #resources h3,h4 {
 margin-top: 30px;
+}
+
+.mybutton{
+	font-size: 0.7em;
+	background-color:#00000036;
+}
+#results p {
+	margin: 0 0 1em 0;
 }
